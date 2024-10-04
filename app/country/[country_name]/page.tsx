@@ -1,28 +1,37 @@
 import React from 'react'
 
 const Country = ({params}:{params: {country_name: string}}) => {
-    let pakistan = {
+  
+  interface CountryType {
+    name: string;
+    capital: string;
+    population: number;
+  }
+  
+  const pakistan : CountryType = {
         name: "Pakistan",
         capital: "Islamabad",
-        population: "220000000" 
+        population: 220000000 
     };
-    let india = {
+    const india : CountryType = {
         name: "India",
         capital: "Delhi",
-        population: "1454145129"
+        population: 1454145129
     };
-    let australia = {
+
+    const australia : CountryType = {
         name: "Australia",
         capital: "Canberra",
-        population: "25422788"
+        population: 25422788
     };
-    let england = {
+
+    const england : CountryType = {
         name: "England",
         capital: "London",
-        population: "67110958"
+        population: 67110958
     };
     
-    const countries = {
+    const countries: {[key: string]: CountryType} = {
         pakistan,
         india,
         england,
